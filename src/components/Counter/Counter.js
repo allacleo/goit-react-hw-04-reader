@@ -1,9 +1,10 @@
 /*eslint-disable */
 import React from 'react';
 import propTypes from 'prop-types';
+import style from '../Reader/Reader.module.css';
 
 const Counter = ({ publicationIdx, itemsLength }) => (
-  <p className={styleMedia.counter}>
+  <p className={style.counter}>
     {publicationIdx}/{itemsLength}
   </p>
 );

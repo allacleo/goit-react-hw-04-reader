@@ -1,14 +1,12 @@
-/*eslint-disable*/
 import React from 'react';
 import propTypes from 'prop-types';
-import style from '../Reader.module.css';
+import style from '../Reader/Reader.module.css';
+
+
 
 const Publication = ({ publication }) => (
   <article className={style.publication}>
-    <h2>
-      {' '}
-      {publicationIdx}. {publication.title}
-    </h2>
+    <h2>{publication.title}</h2>
     <p>{publication.text}</p>
   </article>
 );
@@ -18,7 +16,6 @@ Publication.propTypes = {
     title: propTypes.string.isRequired,
     text: propTypes.string.isRequired,
   }).isRequired,
-  publicationIdx: propTypes.number.isRequired,
 };
 
 export default Publication;

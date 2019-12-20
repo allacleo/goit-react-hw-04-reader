@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
-import Reader from './components/Reader';
+import Reader from './components/Reader/Reader';
 import publications from '../src/publications.json';
 
 const App = () => (

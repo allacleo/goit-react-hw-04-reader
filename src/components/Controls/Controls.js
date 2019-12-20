@@ -1,8 +1,7 @@
-/*eslint-disable*/
 import React from 'react';
 import propTypes from 'prop-types';
 
-import style from '../Reader.module.css';
+import style from '../Reader/Reader.module.css';
 
 const Controls = ({
   onDecrement,
@@ -15,7 +14,7 @@ const Controls = ({
       type="button"
       className={style.button}
       onClick={onDecrement}
-      disabled={publicationIdx === 0}
+      disabled={publicationIdx}
     >
       Назад
     </button>
@@ -23,7 +22,7 @@ const Controls = ({
       type="button"
       className={style.button}
       onClick={onIncrement}
-      disabled={publicationIdx === itemsLength - 1}
+      disabled={itemsLength}
     >
       Вперед
     </button>
@@ -33,8 +32,8 @@ const Controls = ({
 Controls.propTypes = {
   onDecrement: propTypes.func.isRequired,
   onIncrement: propTypes.func.isRequired,
-  publicationIdx: propTypes.number.isRequired,
-  itemsLength: propTypes.number.isRequired,
+  publicationIdx: propTypes.bool.isRequired,
+  itemsLength: propTypes.bool.isRequired,
 };
 
 export default Controls;
